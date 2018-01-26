@@ -18,11 +18,10 @@ shinyUI(fluidPage(
   # Sidebar with a text input
   sidebarLayout(
     sidebarPanel(
-            tags$style("#phrase {font-size:10px;height:200px;}"),
             h2("Paste the Job Description"),
-            textInput(inputId <- "phrase",   #ID for internal app reference
+            textAreaInput(inputId <- "phrase",   #ID for internal app reference
                       label="Description",   #label above the input box
-                      value="Please input your text here"),   #default text to be replaced
+                      value="Please input your text here"), #default text to be replaced
             h3("10 max, but 2 or 3 is best"),
             numericInput(inputId = "DesiredNgrams",
                          label = "N-grams",
